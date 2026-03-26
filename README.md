@@ -93,7 +93,7 @@ graph TD
 ---
 
 ## ✍️ Author
-**Palamkunel Sujith** - *AI & Serverless Architect*
+**Palamkunnel Sujith** - *AI & Serverless Architect*
 - LinkedIn: [https://www.linkedin.com/in/sujithpvarghese/]
 
 ## ⚖️ License
