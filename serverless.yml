@@ -1,10 +1,10 @@
 service: ecommerce-diagnostic-agent
 
-frameworkVersion: "3"
+frameworkVersion: "4"
 
 provider:
   name: aws
-  runtime: nodejs18.x
+  runtime: nodejs22.x
   region: us-east-1
   iam:
     role:

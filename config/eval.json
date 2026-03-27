@@ -1,0 +1,22 @@
+{
+  "scenarios": [
+    {
+      "name": "Missing Stock Reconciliation",
+      "input": "Check Product prod_1234. Website says 0 stock but it should be sellable.",
+      "expected_tools": ["checkWebDatabase", "checkInventoryService", "syncSystem"],
+      "ground_truth": "Website inventory reconciled with Inventory Service. Sync triggered successfully."
+    },
+    {
+      "name": "Stuck Sync (SQS Backlog)",
+      "input": "Project 1029 sync is taking too long. Check the queue.",
+      "expected_tools": ["checkQueueHealth", "queryTroubleshootingGuide", "syncSystem"],
+      "ground_truth": "Identified SQS backlog. Triggered manual sync for style 1029 as per the troubleshooting guide."
+    },
+    {
+      "name": "Fatal Sync Error (DLQ)",
+      "input": "Product 8899 threw an error in the logs. Investigate and fix.",
+      "expected_tools": ["checkDeadLetterQueue", "queryTroubleshootingGuide", "syncSystem"],
+      "ground_truth": "Found DLQ message ERR_INV_404. Resolved by triggering a full PIM-to-Web sync."
+    }
+  ]
+}
