@@ -56,6 +56,24 @@ graph TD
 
 ## 🚀 Getting Started
 
+### ⚡ Instant Local Chat
+New in Project 1: Test the agent logic directly from your terminal!
+1. Copy `.env.example` to `.env` and fill in your `AGENT_ID` and `AGENT_ALIAS_ID`.
+2. Install & Chat:
+   ```bash
+   npm install
+   npm run chat
+   ```
+
+### 🧪 Automated Evaluation
+Project 1 now includes a built-in evaluation suite to measure agent accuracy:
+1. Ensure your agent is deployed (`sls deploy`) and your `AGENT_ID` is set in `.env`.
+2. Run the suite:
+   ```bash
+   npm run eval
+   ```
+*Note: This suite tests your **live** Bedrock Agent deployment to verify its multi-step diagnostic logic.*
+
 ### **Prerequisites**
 *   Active AWS Account with **Amazon Bedrock Model Access** (Claude 3 Sonnet).
 *   **Serverless Framework** installed (`npm install -g serverless`).
